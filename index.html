@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Night We Built</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle at bottom, #0d1b2a, #000814);
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .stars::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      box-shadow:
+        50px 100px white,
+        200px 300px white,
+        400px 150px white,
+        600px 400px white,
+        800px 250px white,
+        1000px 100px white,
+        1200px 350px white,
+        1400px 200px white,
+        1600px 300px white;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    .moon {
+      position: absolute;
+      top: 80px;
+      right: 120px;
+      width: 120px;
+      height: 120px;
+      background: #f1f1f1;
+      border-radius: 50%;
+      box-shadow: -25px 0 0 0 #000814;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 100px;
+      width: 100%;
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+  <div class="moon"></div>
+
+  <div class="text">
+    The night we built under this sky ✨
+  </div>
+
+</body>
+</html>
